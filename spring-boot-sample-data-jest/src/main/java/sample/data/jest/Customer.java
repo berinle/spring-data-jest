@@ -16,13 +16,14 @@
 
 package sample.data.jest;
 
+import io.searchbox.annotations.JestId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
 
 @Document(indexName = "customer", type = "customer", shards = 1, replicas = 0, refreshInterval = "-1")
 public class Customer {
 
-	@Id
+	@JestId
 	private String id;
 
 	private String firstName;
